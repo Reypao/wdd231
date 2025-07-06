@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD231 Home</title>
+
+  <!-- CSS Reset & Custom Styles -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+
+  <!-- JS Functionality -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <button class="menu-toggle">☰</button>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <!-- … -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="sidebar">
+      <time id="current-date"></time>
+    </div>
+    <div class="content" id="courses">
+      <!-- course.js will inject cards here -->
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Efrey Guzman</footer>
+</body>
+</html>

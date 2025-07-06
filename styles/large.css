@@ -1,0 +1,22 @@
+/* styles/large.css */
+
+@media (min-width: 768px) {
+  /* Show nav row on tablets+ */
+  nav {
+    display: block;
+    background: #333;
+    color: #fff;
+  }
+
+  /* Two-column layout */
+  main {
+    display: flex;
+  }
+  .sidebar {
+    flex: 1;
+    padding-right: 1rem;
+  }
+  .content {
+    flex: 3;
+  }
+}
