@@ -1,22 +1,26 @@
 /* styles/large.css */
-
 @media (min-width: 768px) {
-  /* Show nav row on tablets+ */
-  nav {
-    display: block;
-    background: #333;
-    color: #fff;
+  .nav ul {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
   }
 
-  /* Two-column layout */
-  main {
-    display: flex;
+  .about-photo {
+    flex-direction: row;
   }
-  .sidebar {
+
+  .about, .photo {
     flex: 1;
-    padding-right: 1rem;
   }
-  .content {
-    flex: 3;
+
+  .filters button {
+    max-width: 150px;
+  }
+
+  .hamburger {
+    display: none;
   }
 }
+
+

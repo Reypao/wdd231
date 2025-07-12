@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | WDD231</title>
+  <title>Navigation Menu List</title>
+  
   <meta name="description" content="Welcome to my WDD231 Home Page" />
   <meta name="author" content="Efrey Guzman" />
   <!-- CSS Reset & Custom Styles -->
   <link rel="stylesheet" href="styles/normalize.css" />
   <link rel="stylesheet" href="styles/small.css" />
   <link rel="stylesheet" href="styles/large.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <!-- JS Functionality -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
@@ -23,25 +24,24 @@
   <class="site-header">
     <div class="header inner">
       <!-- logo -->
-      <img class="logo" src="images/sprinklerusalogo.jpg" alt="Site Logo" width="40" height="70" />
+      <img class="logo" src="images/sprinklerusalogo.jpg" alt="Site Logo" width="120" height="70" />
       <!--name in a <span>-->
-      <span class="site-name">Efrey Guzman</span>
+
+      <span class="site-name">Efrey A Guzman</span>
       <!--hamburguer for mobile -->
-      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      
     </div>
     <!--semantic nav with three links-->
-    <nav class="main-nav">
-      <ul>
+    <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="chamber.html">Chamber Project</a></li>
         <li><a href="final.html">Final Project</a></li>
-      </ul>
-    </nav>
+    </ul>
     </header>
-
+    <h1>Home</h1>
     <main>
       <!--page tittle-->
-      <h1>Home</h1>
+
       <!--About me/student photo-->
       <section class="about me">
         <h2 class="section-title">About Me</h2>
@@ -61,15 +61,50 @@
               whether it's optimizing a sprinkler system, writing clean code, or simply lending a hand, I'm driven by a
               desire to apply my expertise to make a tangible, positive difference for people.</p>
           </div>
-
-          <time id="current-date"></time>
-        </div>
-        <div class="content" id="courses">
-          <!-- course.js will inject cards here -->
-        </div>
+      </section>
+      <section class="about photo">
+        <h2 class="section-title">Student Photo</h2>
+        <div class="about-grid">
+          <div class="bio">
+            <img>
+          </div>
+      </section>
     </main>
-
-    <footer>&copy; 2025 Efrey Guzman</footer>
+    <main>
+      <!--curses filter + list-->
+      <section class="courses"></section>
+      <h2 class="section title">Web Certificate Courses</h2>
+      <!--filter button-->
+      <div class="filters">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="all">CSE</button>
+        <button class="filter-btn" data-filter="all">WDD</button>
+      </div>
+      <!--course listing-->
+      <div class="course-list">
+        <div class="course-item">WDD 130</div>
+        <div class="course-item">WDD 131</div>
+        <div class="course-item">WDD 231</div>
+      </div>
+      <p class="credits">
+        The total credits for courses listed above is <strong>6</strong>
+      </p>
+      </section>
+      <!--social icons-->
+      <div class="social links">
+        <a href="https://linkedin.com/in/efrey-guzman" target="-blank">
+          <img src="images/linkedin-icon.svg" alt="LinkedIn">
+          <a href="https://github.com/Reypao" target="-blank">
+            <img src="images/github-icon.svg" alt="GitHub">
+            <a href="https://twitter.com/yourUsername" target="-blank">
+              <img src="images/twitter-icon.svg" alt="Twitter">
+            </a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Efrey Guzman • Utah, USA</p>
+      <p id="lastModified"></p>
+    </footer>
 </body>
 
-</html>
+</html
