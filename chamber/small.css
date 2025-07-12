@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  #menuToggle {
+    display: block;
+  }
+
+  #directory.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
