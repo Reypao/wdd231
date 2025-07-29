@@ -566,6 +566,7 @@ form button:hover {
 
 /* Visitor Message */
 .visitor-message {
+  width: 100%;
   background-color: var(--secondary-color);
   color: #fff;
   font-size: 1.1rem;
