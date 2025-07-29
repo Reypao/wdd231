@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Bells Canyon Trail",
+    "address": "Sandy, UT near 10000 S",
+    "description": "Scenic hiking trail in the Wasatch Mountains offering stunning views, waterfalls and well‑maintained paths.",
+    "image": "bells_canyon_trail.webp"
+  },
+  {
+    "name": "Dimple Dell Regional Park",
+    "address": "1100 E 9400 S, Sandy, UT 84094",
+    "description": "Expansive park with walking and horse riding trails, picnic areas, nature center and open green spaces.",
+    "image": "dimple_dell_park.webp"
+  },
+  {
+    "name": "Sandy Amphitheater",
+    "address": "12300 S 1700 E, Sandy, UT 84094",
+    "description": "Outdoor concert venue with mountain views, shaded seating and community events throughout the summer.",
+    "image": "sandy_amphitheater.webp"
+  },
+  {
+    "name": "Hale Centre Theatre",
+    "address": "9900 S Monroe St, Sandy, UT 84070",
+    "description": "Professional live theatre at the Mountain America Performing Arts Centre, hosting musicals and plays year‑round.",
+    "image": "hale_centre_theatre.webp"
+  },
+  {
+    "name": "Shops at South Town",
+    "address": "10400 S State St, Sandy, UT 84070",
+    "description": "Large regional shopping mall with 150 stores, entertainment, dining, an indoor climbing gym and a cinema.",
+    "image": "shops_south_town.webp"
+  },
+  {
+    "name": "Historic Sandy Station",
+    "address": "9000 S 165 E, Sandy, UT",
+    "description": "Light rail TRAX station serving Sandy, adjacent to the Sandy Railtrail and park‑and‑ride facilities.",
+    "image": "historic_sandy_station.webp"
+  },
+  {
+    "name": "John & Mary Mattson House",
+    "address": "239 E Main St, Sandy, UT",
+    "description": "Well‑preserved Victorian home built circa 1910, listed on the National Register of Historic Places.",
+    "image": "mattson_house.webp"
+  },
+  {
+    "name": "American West Symphony",
+    "address": "Various venues including Sandy Amphitheater",
+    "description": "Local symphony orchestra offering concerts in Sandy and Salt Lake Valley, enriching cultural life in the community.",
+    "image": "american_west_symphony.webp"
+  }
+]

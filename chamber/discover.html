@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sandy City Chamber of Commerce - Home">
+  <meta name="description" content="Sandy City Chamber of Commerce - Discover">
   <meta name="author" content="Efrey Guzman">
 
   <!-- Meta Open Graph -->
   <meta property="og:title" content="Sandy City Chamber of Commerce">
-  <meta property="og:description" content="Welcome to Sandy City's official Chamber of Commerce site.">
+  <meta property="og:description" content="Discover Sandy City - Attractions, demographics and features.">
   <meta property="og:image" content="https://your-github-username.github.io/wdd231/chamber/images/og-image.jpg">
-  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/index.html">
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/discover.html">
   <meta property="og:type" content="website">
 
-  <title>Sandy City Chamber of Commerce</title>
+  <title>Discover - Sandy City Chamber of Commerce</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/medium.css">
   <link rel="stylesheet" href="css/small.css">
 
   <link rel="icon" href="images/sandychambersandy.ico" type="image/x-icon">
@@ -31,10 +33,10 @@
     <div class="menu-theme">
       <nav id="navMenu">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="directory.html">Directory</a></li>
-          <li><a href="join.html">Join</a></li> 
-          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
         </ul>
       </nav>
       <button id="themeToggle"><img src="images/toggle.png" alt=""></button>
@@ -43,49 +45,25 @@
   </header>
 
   <!-- Hero Image -->
-  <section class="hero">
+ <section class="hero">
     <img src="images/sandycitydowntown.jpg" alt="Scalable Responsive Hero Image">
     <a href="join.html" class="cta-button">Join the Chamber</a>
   </section>
 
   <!-- Main Content -->
   <main>
-    <h2>Home</h2>
+    <h2>Discover Sandy City</h2>
+    <div class="discover-layout">
+      <!-- Sidebar para mensaje de visitas -->
+      <aside class="visitor-message">
+        <!-- Aquí se insertará dinámicamente el mensaje de visitas con JS -->
+      </aside>
 
-    <div class="info-panels">
-      <!-- Events -->
-      <section class="card events">
-        <h3>Events</h3>
-        <div class="card-event-content">
-          <h4>Fourth of July</h4>
-          <p>Celebrate the 4th of July with Sandy City! Our biggest event of the year.</p>
-          <hr>
-          <h4>Free Fishing Day</h4>
-          <p>Join us for National Free Fishing Day!</p>
-        </div>
-      </section>
-
-      <!-- Current Weather -->
-      <section class="card weather" id="weather-card">
-        <h3>Current Weather</h3>
-        <div class="weather-content">
-          <img id="weather-icon" src="images/cloudy.png" alt="Weather Icon" class="weather-icon" style="opacity: 0;">
-          <div class="weather-text" id="weather-info"></div>
-        </div>
-      </section>
-
-      <!-- Forecast -->
-      <section class="card forecast" id="forecast-card">
-        <h3>3-Day Forecast</h3>
-        <div id="forecast"></div>
+      <!-- Contenedor de las cards de interés -->
+      <section class="discover-gallery">
+        <!-- Aquí cargaremos dinámicamente las 8 cards desde discover.json -->
       </section>
     </div>
-
-    <!-- Spotlights -->
-    <section class="spotlight-section">
-      <h3>Member Spotlights</h3>
-      <div id="spotlights" class="spotlight-container"></div>
-    </section>
   </main>
 
   <!-- Footer -->
@@ -111,6 +89,8 @@
   </footer>
 
   <script src="js/home.js"></script>
+  <!-- Futuro JS para Discover Page -->
+  <script src="js/discover.js"></script>
 </body>
 
 </html>

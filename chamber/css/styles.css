@@ -541,6 +541,131 @@ form button {
 form button:hover {
   background-color: var(--accent-color);
 }
+
+/* ----------
+   Discover Page
+------------ */
+/* Discover Layout (base) */
+.discover-layout {
+  display: grid;
+  grid-template-areas:
+    "visitor"
+    "gallery";
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Asignación de áreas */
+.visitor-message {
+  grid-area: visitor;
+}
+
+.discover-gallery {
+  grid-area: gallery;
+}
+
+/* Visitor Message */
+.visitor-message {
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.discover-gallery {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 1.5rem;
+}
+
+/* Tarjetas de Discover */
+.discover-card {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Imagen superior */
+.discover-card figure {
+  margin: 0;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.discover-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.discover-card img {
+  transition: filter 0.3s ease;
+}
+
+.discover-card:hover img {
+  filter: brightness(1.4);
+}
+
+/* Contenido del texto */
+.discover-card h2 {
+  background-color: var(--secondary-color);
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.discover-card address {
+  font-style: normal;
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.discover-card p {
+  padding: 0 1rem 1rem 1rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* Botón */
+.discover-card button {
+  margin: 0 1rem 1rem 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.discover-card button:hover {
+  background-color: var(--accent-color);
+}
+
 /* ----------
     Footer
   ------------ */

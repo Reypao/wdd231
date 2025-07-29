@@ -1,0 +1,30 @@
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Discover Layout para pantallas medianas */
+  .discover-layout {
+    grid-template-areas:
+      "visitor visitor"
+      "gallery gallery";
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Las cards se verán en 2 columnas */
+  .discover-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Discover Layout para pantallas grandes */
+  .discover-layout {
+    grid-template-areas:
+      "visitor gallery";
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+  }
+
+  /* Las cards se verán en 3 columnas en desktop */
+  .discover-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
