@@ -1,114 +1,76 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
+:root {
+  --primary-color: #F7FFDD;
+  --secondary-color: #4D4730;
+  --accent-color: #47A8BD;
+  --background-color: #236903;
+  --text-color: #F7FFDD;
 }
 
-.site-header {
+*{
+  margin: 0;
+}
+
+body {
+  background-color: #aadbd3;
+}
+
+/* -------------------- HEADER -------------------- */
+
+a{
+  text-decoration: none;
+}
+
+header {
   display: flex;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--primary-color);
+  background-color: var(--background-color);
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #ccc;
 }
 
-.site-header .logo {
-  height: 50px;
+header img {
+  width: 200px;
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+header nav a {
+  padding-left: 1rem;
+  font-weight: 300;
+  color: var(--text-color);
+  font-size: 2em;
 }
 
-.hero {
-  position: relative;
-  text-align: center;
-}
+/* -------------------- HERO -------------------- */
 
-.hero-image img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-}
-
-.cta-button {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background-color: #007BFF;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.testimonials {
+#hero {
+  padding: 2em 1em;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  padding: 2rem;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.testimonial {
-  max-width: 300px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.profile img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-}
-
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 2rem;
   justify-content: center;
 }
 
-.gallery img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+#hero img {
+  width: 80%;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
-.site-footer {
-  background-color: #eee;
-  padding: 2rem;
+/* -------------------- comments -------------------- */
+
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#customer h2 {
   text-align: center;
 }
 
-.site-footer .footer-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
+.customer {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  width: 25%;
 }
 
-.footer-logo {
-  height: 40px;
-  margin-bottom: 1rem;
-}
-
-.social-media img {
-  width: 24px;
-  margin: 0 5px;
-}
-
-.footer-legal {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
