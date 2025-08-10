@@ -6,82 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SprinklerUSA</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/small.css">
 </head>
-
 <body>
     <header>
-        <img src="images/sprinklerusalogo.jpg" alt="SprinklerUSA logo" class="logo">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Products & Services</a>
-            <a href="#">About Us</a>
-        </nav>
+        <div class="logo">
+            <img src="images/sprinklerusalogo.jpg" alt="SprinklerUSA logo" class="logo">
+            <h1><strong>SprinklerUSA</strong></h1>
+        </div>
+        <div class="menu-theme">
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle"><img src="images/toggle.png" alt=""></button>
+            <button id="menuToggle">☰</button>
+        </div>
     </header>
     <main>
         <section id="hero">
             <img src="images/maintenacesprinklers.jpg" alt="hero">
+            <button id="open-quote" class="btn">Request a Quote</button>
         </section>
         <section id="customers">
             <h2>OUR CUSTOMERS</h2>
             <div class="customers">
                 <div class="customer">
                     <img src="images/customers/customer1.png" alt="contractor">
-                    <h4>Hunter Industries</h4>
-                    <p>Hunter gives you all the tools you need to grow your business.</p>
+                    <h4>Contractors</h4>
+                    <p>SprinklerUSA gives you all the tools you need to grow your business.</p>
                 </div>
                 <div class="customer">
                     <img src="images/customers/customer2.png" alt="">
                     <h4>Designers</h4>
-                    <p>We are committed to offering helpful resources to simplify the design proces</p>
+                    <p>Our designers are committed to offering powerful resources to simplify the blueprint proces</p>
                 </div>
                 <div class="customer">
                     <img src="images/customers/customer3.png" alt="">
-                    <h4>Hunter Industries</h4>
-                    <p>Proudly serving residential and commercial properties across Salt Lake County with expert
-                        service, quality parts, and reliable results you can count on.</p>
+                    <h4>Residential Customers</h4>
+                    <p>Our homeowners can trust because we provide top quality products that use only the water and energy needed to get the job done efficiently.</p>
                 </div>
                 <div class="customer">
                     <img src="images/customers/customer4.png" alt="">
-                    <h4>Hunter Industries</h4>
-                    <p>Proudly serving residential and commercial properties across Salt Lake County with expert
-                        service, quality parts, and reliable results you can count on.</p>
-                </div>
-                <div class="customer">
-                    <img src="images/customers/customer5.png" alt="">
-                    <h4>Hunter Industries</h4>
-                    <p>Proudly serving residential and commercial properties across Salt Lake County with expert
-                        service, quality parts, and reliable results you can count on.</p>
+                    <h4>Distributors</h4>
+                    <p>SprinklerUSA gives you all the tools you need to grow your business.</p>
                 </div>
             </div>
         </section>
-        <section id="gallery">
-            <div>
-                <img src="images/gallery/anatomyofdrip.webp" alt="">
-                <img src="images/gallery/dripline.jpg" alt="">
-                <img src="images/gallery/repair.jpg" alt="">
-                <img src="images/gallery/services_1.jpg" alt="">
-                <img src="images/gallery/services_2.jpg" alt="">
-            </div>
-        </section>
+        <dialog id="quoteDialog" aria-labelledby="quoteTittle">
+            <form method="dialog" class="modal-content">
+                <header class="modal-header">
+                    <h3 id="quoteTittle">Request a Quote</h3>
+                    <button type="submit" value="cancel" aria-label="close" cl></button>
+                </header>
+
+        </dialog>
     </main>
     <footer>
-        <img src="images/sprinklerusalogo.jpg" alt="logo">
-        <div class="footer-links">
-            <a href="">Home</a>
-            <a href="">Products & Services</a>
-            <a href="">About Us</a>
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="images/sprinklerusalogo.jpg" alt="SprinklerUSA logo">
+            </div>
+            <nav class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Services</a>
+            </nav>
+            <div class="social-media">
+                <a href="#"><img src="images/instagram_icon.png" alt="Instagram"></a>
+                <a href="#"><img src="images/facebook_icon.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            </div>
         </div>
-        <div class="social-media">
-            <img src="images/facebook_icon.png" alt="Social Icon 1">
-            <img src="images/twitter.png" alt="Social Icon 2">
-            <img src="images/instagram_icon.png" alt="Social Icon 3">
+        <div class="footer-bottom">
+            <p>©<span id="year">2025</span> SprinklerUSA.</p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
         </div>
-        <div>
-            <p>© 2025 - Efrey Guzman. All right reserved</p>
-            <p>Privacy Policy</p>
-            <p>Term of Service</p>
+        <div class="footer-extra">
+            <p>
+                WDD231 Final Project<br>
+                Efrey Guzman<br>
+                Last Modification: <span id="lastModified"></span>
+            </p>
         </div>
     </footer>
 </body>
-
 </html>
+

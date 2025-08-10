@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SprinklerUSA</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <meta name="color-scheme" content="light dark" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/sprinklerusalogo.jpg" alt="SprinklerUSA logo" class="logo">
+            <h1><strong>SprinklerUSA</strong></h1>
+        </div>
+        <div class="menu-theme">
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle"><img src="images/toggle.png" alt=""></button>
+            <button id="menuToggle">☰</button>
+        </div>
+    </header>
+<body>
+  <main>
+    <section id="hero" class="hero">
+      <img src="images/efreySprinklerUSA.png" alt="Parts sprinkler system" />
+      <button id="open-quote" class="btn">Request a Quote</button>
+    </section>
+    <!-- Dynamic Catalog -->
+    <section id="catalog" class="section">
+      <div class="section-head">
+        <h2>Popular Products</h2>
+        <div class="filters">
+          <label>
+            <input type="checkbox" id="inStockOnly" />
+            In stock only
+          </label>
+          <select id="categoryFilter" aria-label="Filter by category">
+            <option value="all">All categories</option>
+            <option value="controllers">Controllers</option>
+            <option value="valves">Valves</option>
+            <option value="sprinklers">Sprinklers</option>
+            <option value="drip">Drip</option>
+          </select>
+        </div>
+      </div>
+      <div id="catalogGrid" class="grid" aria-live="polite"></div>
+      <p id="catalogStatus" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- Accessible modal -->
+    <dialog id="quoteDialog" aria-labelledby="quoteTitle">
+      <form method="dialog" class="modal-content" id="quoteForm">
+        <header class="modal-header">
+          <h3 id="quoteTitle">Request a Quote</h3>
+          <button class="icon-btn" value="cancel" aria-label="Close dialog">✕</button>
+        </header>
+
+        <div class="modal-body">
+          <label>
+            Name
+            <input name="name" type="text" required autocomplete="name" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required autocomplete="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            Phone
+            <input name="phone" type="tel" required autocomplete="tel" />
+          </label>
+          <label>
+            Notes
+            <textarea name="notes" rows="4" placeholder="Describe your project…"></textarea>
+          </label>
+        </div>
+
+        <footer class="modal-footer">
+          <button class="btn-outline" value="cancel">Cancel</button>
+          <button class="btn" value="submit">Send Request</button>
+        </footer>
+      </form>
+    </dialog>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="images/sprinklerusalogo.jpg" alt="SprinklerUSA logo" />
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Services</a>
+      </nav>
+      <div class="social-media">
+        <a href="#"><img src="images/instagram_icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="images/facebook_icon.png" alt="Facebook" /></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter/X" /></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> SprinklerUSA.</p>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div class="footer-extra">
+      <p>
+        WDD231 Final Project<br />
+        Efrey Guzman<br />
+        Last Modification: <span id="lastModified"></span>
+      </p>
+    </div>
+  </footer>
+
+  <noscript>JavaScript is required to load the product catalog.</noscript>
+  <!-- ES Modules entry -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

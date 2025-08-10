@@ -1,0 +1,8 @@
+[
+  { "id": "install", "label": "New System Installation" },
+  { "id": "repair", "label": "Sprinkler Repair & Troubleshooting" },
+  { "id": "design", "label": "Design & Consulting" },
+  { "id": "winterize", "label": "Winterization (Blowout)" },
+  { "id": "spring", "label": "Spring Start-Up & Tune" },
+  { "id": "drip", "label": "Drip System Install/Repair" }
+]

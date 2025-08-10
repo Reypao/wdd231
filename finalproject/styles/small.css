@@ -7,3 +7,28 @@
   .hero {
     text-align: left;
   }
+}
+
+.footer-top {
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-links {
+    justify-content: center;
+}
+
+.social-media {
+    justify-content: center;
+}
+
+.footer-links {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
