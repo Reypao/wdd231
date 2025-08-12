@@ -31,87 +31,14 @@
 
   <body>
     <main>
-      <section id="hero" class="hero">
-        <img src="images/efreySprinklerUSA.png" alt="Parts sprinkler system" />
-        <button id="open-quote" class="btn">Request a Quote</button>
-      </section>
       <!-- Dynamic Catalog -->
       <section id="catalog" class="section">
         <div class="section-head">
           <h2>Popular Products</h2>
-          <div class="filters">
-            <label>
-              <input type="checkbox" id="inStockOnly" />
-              In stock only
-            </label>
-            <select id="categoryFilter" aria-label="Filter by category">
-              <option value="all">All categories</option>
-              <option value="controllers">Controllers</option>
-              <option value="valves">Valves</option>
-              <option value="sprinklers">Sprinklers</option>
-              <option value="drip">Drip</option>
-            </select>
-          </div>
         </div>
         <div id="catalogGrid" class="grid" aria-live="polite"></div>
         <p id="catalogStatus" class="status" role="status" aria-live="polite"></p>
       </section>
-
-      <!-- Accessible modal -->
-      <!DOCTYPE html>
-      <html lang="en">
-
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>SprinklerUSA</title>
-        <link rel="stylesheet" href="styles/style.css" />
-        <link rel="stylesheet" href="styles/small.css" />
-        <link rel="script" href="script/js" />
-        <meta name="color-scheme" content="light dark" />
-      </head>
-
-      <body>
-        <header>
-          <div class="logo">
-            <img src="images/sprinklerusalogo.jpg" alt="SprinklerUSA logo" class="logo">
-            <h1><strong>SprinklerUSA</strong></h1>
-          </div>
-          <div class="menu-theme">
-            <nav id="navMenu">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html" class="active">Products</a></li>
-                <li><a href="services.html">Services</a></li>
-              </ul>
-            </nav>
-        </header>
-        <main>
-          <h1>Products-reuse<h1>
-              <div id="showhere"></div>
-              <!--one single dialog for part-->
-              <dialog id="mydialog">
-                <h2>Sample Title</h2>
-                <button>x</button>
-                <p>#</p>
-              </dialog>
-              <button id="openButton1">Controllers</button>
-              <button id="openButton2">Rotors</button>
-              <button id="openButton3">Drip</button>
-              <dialog id="dialogBox">
-                <p>#</p>
-                <button id="closeButton">Close</button>
-              </dialog>
-        </main>
-        <footer>
-          <p>&copy; Guzman Lab</p>
-        </footer>
-        <script src="js/scripts.js" type="module"></script>
-
-      </body>
-
-      </html>
-
     </main>
 
     <footer>
@@ -144,7 +71,7 @@
       </div>
     </footer>
     <!-- ES Modules entry -->
-    <script src="js/sprinklerusa.js" type="module"></script>
+    <script src="scripts/products.js" type="module"></script>
   </body>
 
 </html>
