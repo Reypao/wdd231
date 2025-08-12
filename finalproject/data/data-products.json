@@ -1,0 +1,137 @@
+ [
+  {
+    "id": 1,
+    "name": "Smart Sprinkler Controller",
+    "category": "controllers",
+    "price": 199.99,
+    "inStock": true,
+    "image": "images/products/controller1.jpg",
+    "description": "Wi-Fi enabled controller with weather-based scheduling."
+  },
+  {
+    "id": 2,
+    "name": "Basic Sprinkler Controller",
+    "category": "controllers",
+    "price": 89.99,
+    "inStock": true,
+    "image": "images/products/controller2.jpg",
+    "description": "Simple 6-zone irrigation controller for small yards."
+  },
+  {
+    "id": 3,
+    "name": "Pro-Series Sprinkler Controller",
+    "category": "controllers",
+    "price": 249.99,
+    "inStock": false,
+    "image": "images/products/controller3.jpg",
+    "description": "12-zone professional controller with mobile app."
+  },
+  {
+    "id": 4,
+    "name": "Pop-Up Rotor Sprinkler",
+    "category": "sprinklers",
+    "price": 14.49,
+    "inStock": true,
+    "image": "images/products/sprinkler1.jpg",
+    "description": "Adjustable arc rotor for even water distribution."
+  },
+  {
+    "id": 5,
+    "name": "Fixed Spray Sprinkler Head",
+    "category": "sprinklers",
+    "price": 9.99,
+    "inStock": true,
+    "image": "images/products/sprinkler2.jpg",
+    "description": "Reliable spray head for garden beds and lawns."
+  },
+  {
+    "id": 6,
+    "name": "High-Efficiency Nozzle Set",
+    "category": "sprinklers",
+    "price": 19.99,
+    "inStock": false,
+    "image": "images/products/sprinkler3.jpg",
+    "description": "Set of 5 nozzles for improved coverage and water savings."
+  },
+  {
+    "id": 7,
+    "name": "1-Inch Electric Valve",
+    "category": "valves",
+    "price": 29.99,
+    "inStock": true,
+    "image": "images/products/valve1.jpg",
+    "description": "Durable electric control valve with flow control."
+  },
+  {
+    "id": 8,
+    "name": "3/4-Inch Electric Valve",
+    "category": "valves",
+    "price": 24.99,
+    "inStock": true,
+    "image": "images/products/valve2.jpg",
+    "description": "Compact size perfect for residential installations."
+  },
+  {
+    "id": 9,
+    "name": "Brass Anti-Siphon Valve",
+    "category": "valves",
+    "price": 39.99,
+    "inStock": false,
+    "image": "images/products/valve3.jpg",
+    "description": "Prevents backflow and protects potable water supply."
+  },
+  {
+    "id": 10,
+    "name": "Drip Irrigation Tubing 100ft",
+    "category": "drip",
+    "price": 27.99,
+    "inStock": true,
+    "image": "images/products/drip1.jpg",
+    "description": "Flexible 1/2-inch tubing for drip irrigation systems."
+  },
+  {
+    "id": 11,
+    "name": "Adjustable Drip Emitters (25-Pack)",
+    "category": "drip",
+    "price": 15.99,
+    "inStock": true,
+    "image": "images/products/drip2.jpg",
+    "description": "Emitters with adjustable flow for targeted watering."
+  },
+  {
+    "id": 12,
+    "name": "Micro-Spray Stakes (10-Pack)",
+    "category": "drip",
+    "price": 12.49,
+    "inStock": false,
+    "image": "images/products/drip3.jpg",
+    "description": "Perfect for pots, planters, and small garden beds."
+  },
+  {
+    "id": 13,
+    "name": "Soil Moisture Sensor",
+    "category": "controllers",
+    "price": 39.99,
+    "inStock": true,
+    "image": "images/products/sensor1.jpg",
+    "description": "Measures soil moisture to prevent overwatering."
+  },
+  {
+    "id": 14,
+    "name": "Rain Shut-Off Sensor",
+    "category": "controllers",
+    "price": 29.99,
+    "inStock": true,
+    "image": "images/products/sensor2.jpg",
+    "description": "Stops irrigation during rainfall to save water."
+  },
+  {
+    "id": 15,
+    "name": "Inline Drip Filter",
+    "category": "drip",
+    "price": 18.99,
+    "inStock": true,
+    "image": "images/products/filter1.jpg",
+    "description": "Removes particles to protect drip irrigation lines."
+  }
+]
