@@ -128,13 +128,16 @@ nav ul li .active {
 
 /* -------------------- footer -------------------- */
 
-.site-footer {
-  background: var(--background-color);
+footer {
+  background: var(--secondary-color);
   padding: 20px 40px;
+  margin-top: 15px;
 }
 
+/* Fila superior */
 .footer-top {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -159,9 +162,110 @@ nav ul li .active {
   color: #333;
 }
 
-.footer-bottom a:hover {
+.footer-links a:hover {
   text-decoration: underline;
-
 }
 
+.social-media {
+  display: flex;
+  gap: 10px;
+}
 
+.social-media img {
+  height: 24px;
+}
+
+/* Fila inferior */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  gap: 20px;
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.footer-copy {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-copy p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.footer-copy a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-copy a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Estilos específicos para la sección de Catalog ---------- */
+/* Contenedor principal del grid */
+#catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Tarjeta individual de producto */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* Efecto hover básico */
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del producto */
+.product-card .product-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenido de la tarjeta */
+.product-card .product-body {
+  padding: 1rem;
+  flex: 1; /* para que crezca si es necesario */
+}
+
+/* Título del producto */
+.product-card .product-body h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Párrafos info
+/* Párrafos informativos */
+.product-card .product-body p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+/* Stock en negrita y con color */
+.product-card .product-body p strong {
+  color: #000;
+}
