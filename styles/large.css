@@ -72,6 +72,11 @@
     padding: 0;
   }
 
+  .photo {
+    display: flex;
+    justify-content: center;
+  }
+
   .student-photo .photo-placeholder {   
     margin-top: 1rem; 
     width: 300px;
