@@ -4,17 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>SprinklerUSA — Products</title>
+  <title>SprinklerUSA — Form Result</title>
 
-  <meta name="description" content="SprinklerUSA - Sistemas de riego, accesorios y mantenimiento.">
-  <meta name="author" content="Efrey Guzman">
-  <link rel="icon" href="images/sprinklerusalogo.jpg" type="image/jpeg">
-
-  <meta property="og:title" content="SprinklerUSA — Products">
-  <meta property="og:description" content="SprinklerUSA Products Catalog">
-  <meta property="og:image" content="images/sprinklerusalogo.jpg">
-  <meta property="og:url" content="https://reypao.github.io/wdd231/finalproject/products.html">
-  <meta property="og:type" content="website">
+  <!-- Metadatos mínimos -->
+  <meta name="description" content="Form submission result for SprinklerUSA." />
+  <meta name="author" content="Efrey Guzman" />
+  <link rel="icon" href="images/sprinklerusalogo.jpg" type="image/jpeg" />
 
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/small.css" />
@@ -30,9 +25,8 @@
       <nav id="navMenu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="products.html">Products</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <button id="themeToggle"><img src="images/toggle.png" alt=""></button>
@@ -41,23 +35,26 @@
   </header>
 
   <main>
-    <section id="catalog">
-      <h2>Products</h2>
+    <section id="form-result">
+      <h2>Form Result</h2>
+      <p>Below you can see the information you submitted.</p>
 
-      <div id="catalogControl">
-        <label>
-          <input type="checkbox" id="onlyInStock" />
-          Only In Stock
-        </label>
-      </div>
+      <!-- Tabla donde mostramos los datos -->
+      <table id="resultTable" class="result-table">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Se completa con JS -->
+        </tbody>
+      </table>
 
-      <!-- Estado del catálogo -->
-      <p id="catalogStatus">loading products…</p>
-
-      <!-- Contenedor donde se insertarán las cards -->
-      <div id="catalogGrid">
-        <!-- Se llena con JS -->
-      </div>
+      <p style="margin-top: 1rem;">
+        <a href="contact.html">← Back to Contact</a>
+      </p>
     </section>
   </main>
 
@@ -96,13 +93,7 @@
     </div>
   </footer>
 
-  <!-- ES Modules entry -->
-  <script type="module" src="scripts/products.js"></script>
-  <script>
-    // Actualiza "Last Modification" del footer
-    const lm = document.getElementById('lastModified');
-    if (lm) lm.textContent = document.lastModified;
-  </script>
+  <!-- Script externo -->
+  <script type="module" src="scripts/form-result.js"></script>
 </body>
-
 </html>

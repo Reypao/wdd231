@@ -1,69 +1,88 @@
 // scripts/products.js
-// Carga y muestra el catálogo de productos usando fetchJSON (desde common.js).
-// Simple y didáctico: querySelector directo, forEach, template literals, try/catch.
+// Catálogo de productos con filtro "Solo en stock" persistido en localStorage.
 
 import { fetchJSON } from './common.js';
 
-// Referencias al DOM
+// Elementos del DOM
 const statusEl = document.querySelector('#catalogStatus');
 const gridEl = document.querySelector('#catalogGrid');
+const onlyInStockEl = document.querySelector('#onlyInStock');
 
-// Crea una card de producto (estructura simple y clara)
+// Clave de localStorage
+const LS_KEY_ONLY_IN_STOCK = 'catalogOnlyInStock';
+
+// Placeholder existente en el proyecto
+const PLACEHOLDER = 'images/maintenacesprinklers.jpg';
+
+// Render de una card
 function crearCard(producto) {
-  // Usamos acceso directo (sin técnicas avanzadas) y valores por defecto básicos
   const name = producto.name || 'Sin nombre';
   const category = producto.category || 'Sin categoría';
-  const price = typeof producto.price === 'number' ? producto.price : parseFloat(producto.price) || 0;
+  const priceNum = typeof producto.price === 'number' ? producto.price : parseFloat(producto.price) || 0;
   const description = producto.description || 'Sin descripción';
   const inStock = Boolean(producto.inStock);
 
-  const image = producto.image
   const card = document.createElement('article');
   card.className = 'product-card';
-
   card.innerHTML = `
     <div class="product-media">
-      <img src="${image}" alt="${name}" loading="lazy">
+      <img src="${PLACEHOLDER}" alt="${name}" loading="lazy" width="400" height="300">
     </div>
     <div class="product-body">
       <h3>${name}</h3>
       <p><strong>Categoría:</strong> ${category}</p>
-      <p><strong>Precio:</strong> $${price.toFixed(2)}</p>
+      <p><strong>Precio:</strong> $${priceNum.toFixed(2)}</p>
       <p>${description}</p>
-      <p><strong>Stock:</strong> ${inStock ? 'En stock' : 'Sin stock'}</p>
+      <p><strong>Stock:</strong> ${inStock ? 'In stock' : 'Run out stock'}</p>
     </div>
   `;
-
   return card;
 }
 
-// Carga y render del catálogo
-async function cargarCatalogo() {
-  statusEl.textContent = 'Cargando productos...';
+// Aplica filtro según el checkbox
+function aplicarFiltro(productos) {
+  if (onlyInStockEl && onlyInStockEl.checked) {
+    return productos.filter(p => Boolean(p.inStock));
+  }
+  return productos;
+}
 
+// Pinta el grid
+function renderizar(productos) {
+  gridEl.innerHTML = '';
+  productos.forEach(p => {
+    gridEl.appendChild(crearCard(p));
+  });
+}
+
+// Carga principal
+async function cargarCatalogo() {
+  statusEl.textContent = 'Loading products...';
   try {
     const productos = await fetchJSON('data/data-products.json');
+    if (!Array.isArray(productos)) throw new Error('El JSON de productos debe ser un array.');
 
-    if (!Array.isArray(productos)) {
-      throw new Error('El JSON de productos debe ser un array.');
-    }
-
-    // Limpiamos el contenedor
-    gridEl.innerHTML = '';
-
-    // Recorremos y agregamos cada card
-    productos.forEach(function (p) {
-      const card = crearCard(p);
-      gridEl.appendChild(card);
-    });
-
-    statusEl.textContent = 'Hay ' + productos.length + ' productos.';
-
-  } catch (error) {
-    console.error('Error al cargar productos:', error);
+    const filtrados = aplicarFiltro(productos);
+    renderizar(filtrados);
+    statusEl.textContent =  filtrados.length + ' products.';
+  } catch (err) {
+    console.error('Error al cargar productos:', err);
     statusEl.textContent = 'Ocurrió un error al cargar los productos.';
   }
 }
 
-// Iniciar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', cargarCatalogo);
+// Inicializa el estado del checkbox desde localStorage
+function initOnlyInStock() {
+  if (!onlyInStockEl) return;
+  const guardado = localStorage.getItem(LS_KEY_ONLY_IN_STOCK);
+  onlyInStockEl.checked = guardado === 'true';
+  onlyInStockEl.addEventListener('change', () => {
+    localStorage.setItem(LS_KEY_ONLY_IN_STOCK, String(onlyInStockEl.checked));
+    cargarCatalogo(); // recarga con el filtro aplicado
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initOnlyInStock();
+  cargarCatalogo();
+});

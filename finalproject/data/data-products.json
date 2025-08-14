@@ -4,8 +4,8 @@
     "name": "Smart Sprinkler Controller",
     "category": "controllers",
     "price": 199.99,
-    "inStock": true,
-    "image": "images/products/timer1.webp",
+    "inStock": false,
+    "image": "images/products/controller1.jpg",
     "description": "Wi-Fi enabled controller with weather-based scheduling."
   },
   {
@@ -13,7 +13,7 @@
     "name": "Basic Sprinkler Controller",
     "category": "controllers",
     "price": 89.99,
-    "inStock": true,
+    "inStock": false,
     "image": "images/products/controller2.jpg",
     "description": "Simple 6-zone irrigation controller for small yards."
   },
@@ -22,7 +22,7 @@
     "name": "Pro-Series Sprinkler Controller",
     "category": "controllers",
     "price": 249.99,
-    "inStock": false,
+    "inStock": true,
     "image": "images/products/controller3.jpg",
     "description": "12-zone professional controller with mobile app."
   },
@@ -31,7 +31,7 @@
     "name": "Pop-Up Rotor Sprinkler",
     "category": "sprinklers",
     "price": 14.49,
-    "inStock": true,
+    "inStock": false,
     "image": "images/products/sprinkler1.jpg",
     "description": "Adjustable arc rotor for even water distribution."
   },
