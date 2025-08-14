@@ -1,0 +1,120 @@
+/* large.css - desktop layout */
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  /* HEADER */
+
+  header {
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  .header-inner {
+    justify-content: flex-start;
+  }
+
+  nav {
+    display: block;
+    width: 100%;
+    background-color: #063752;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  nav li {
+    width: auto;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+
+  nav a:hover {
+    background-color: #53becc;
+  }
+
+  /* PAGE TITLE */
+
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    margin-left: 1rem;
+  }
+
+  /* ABOUT + PHOTO */
+
+  .about-photo {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .about-me {
+    flex: 1;
+    min-height: 380px;
+    min-width: 60%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .student-photo {
+    flex: 1;
+    min-height: 380px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .student-photo .photo-placeholder {   
+    margin-top: 1rem; 
+    width: 300px;
+    height: 300px;
+       
+  }
+
+  /* COURSES SECTION */
+
+  .courses {
+    padding: 0 1rem;
+  }
+
+  .filters {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.4em;
+    gap: 1.4rem;
+  }
+
+  .filters button {
+    flex: 1 1 200px;
+  }
+
+  .course-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .course-list > div {
+    font-size: 1rem;
+  }
+
+  .social-links img {
+    width: 40px;
+    height: 40px;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}

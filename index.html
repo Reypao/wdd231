@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navigation Menu List</title>
+
+  <meta name="description" content="Welcome to my WDD231 Home Page"/>
+  <meta name="author" content="Efrey Guzman"/>
+
+  <link rel="stylesheet" href="styles/normalize.css"/>
+  <link rel="stylesheet" href="styles/small.css"/>
+  <link rel="stylesheet" href="styles/large.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <img class="logo" src="images/sprinklerusalogo.jpg" alt="Site Logo" width="120" height="70"/>
+      <span class="site-name">Efrey A Guzman</span>
+      <button class="hamburger" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber.html">Chamber Project</a></li>
+        <li><a href="final.html">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+    <section class="about-photo">
+      <section class="about-me">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="bio">
+            <p>
+              Professionally, I navigate the technical demands of water irrigation systems as a technician and
+              inside-sales to contractor serving West Jordan, UT. This hands-on role has honed my ability to diagnose
+              issues, implement practical solutions, and understand client needs. I'm now channeling that dedication
+              into a new chapter, actively pursuing a software development education with BYU Pathway Worldwide to build
+              innovative solutions in the tech landscape. At the heart of everything I do is my family, I'm a committed
+              husband and a proud dad to three incredible triplet girls, who teach me resilience and perspective every
+              day.
+              My interests provide balance and inspiration. Drawing allows me a creative outlet, while movies offer
+              escape and storytelling. Tennis keeps me active and sharpens my strategic thinking. I'm naturally curious
+              and love discovering new places, which fuels my understanding of diverse needs and solutions. Ultimately,
+              whether it's optimizing a sprinkler system, writing clean code, or simply lending a hand, I'm driven by a
+              desire to apply my expertise to make a tangible, positive difference for people.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="student-photo">
+        <h2 class="section-title">Student Photo</h2>
+        <img src="images/efreychamber.jpg" alt="Efrey Guzman Photo" width="300" height="300">
+        </div>
+      </section>
+    </section>
+
+    <section class="courses">
+      <h2 class="section-title">Web Certificate Courses</h2>
+      <div class="filters">
+        <button class="filter-btn" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cse">CSE</button>
+        <button class="filter-btn" data-filter="wdd">WDD</button>
+      </div>
+
+      <div class="course-list">
+        <div class="course-item">WDD 130</div>
+        <div class="course-item">WDD 131</div>
+        <div class="course-item">WDD 231</div>
+      </div>
+
+      <p class="credits">
+        The total credits for courses listed above is <strong>6</strong>
+      </p>
+    </section>
+
+    <div class="social-links">
+      <a href="https://linkedin.com/in/efrey-guzman" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/Reypao" target="_blank">
+        <img src="images/github.png" alt="GitHub">
+      </a>
+      <a href="https://twitter.com/yourUsername" target="_blank">
+        <img src="images/x-icon.png" alt="Twitter">
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 • Efrey Guzman • Utah, USA</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>
