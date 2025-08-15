@@ -32,7 +32,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <button id="themeToggle"><img src="images/toggle.png" alt=""></button>
@@ -62,6 +61,41 @@
                 <p id="serviceModalContent">Detalle del servicio...</p>
             </div>
         </div>
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <!-- Formulario simple (GET) que envía a form-result.html -->
+            <form action="form-result.html" method="get" id="contactForm" class="contact-form">
+                <!-- Nombre -->
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Your name" />
+
+                <!-- Email -->
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+                <!-- Motivo / Servicio -->
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic">
+                    <option value="general">General Inquiry</option>
+                    <option value="installation">Installation</option>
+                    <option value="maintenance">Maintenance</option>
+                </select>
+
+                <!-- Mensaje -->
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here"></textarea>
+
+                <!-- Consentimiento simple -->
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="agree" value="yes" />
+                    I agree to be contacted back
+                </label>
+
+                <!-- Enviar -->
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
 
     <footer>
