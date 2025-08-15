@@ -41,7 +41,7 @@
   }
 
   /* Customers: 1 por fila */
-  #customers h2 {
+  #customers h1,h2 {
     font-size: 1.8em;
   }
 

@@ -231,7 +231,7 @@ nav ul li .active {
   justify-content: center;
 }
 
-#customers h2 {
+#customers h1,h2 {
   font-size: 3em;
   text-align: center;
   color: var(--secondary-color);
