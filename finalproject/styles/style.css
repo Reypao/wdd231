@@ -227,19 +227,35 @@ nav ul li .active {
   display: flex;
   flex-wrap: wrap;
   font: var(--primary-color);
-  gap: 5rem;
-  border-color: #829813;
+  gap: 2em;  
+  justify-content: center;
 }
 
-#customer h2 {
+#customers h2 {
+  font-size: 3em;
   text-align: center;
-  color: aqua;
+  color: var(--secondary-color);
+  margin-bottom: 2%;
 }
 
 .customer {
-  background-color: var(--secondary-color);
+  background-color: none;
   border-radius: 10px;
   width: 19.3%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4em;
+  gap: 1em;
+}
+
+.customer h4 {
+  font-size: 1.6em;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--secondary-color);
 }
 
 /* ---------- Modal ---------- */

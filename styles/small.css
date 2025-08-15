@@ -57,7 +57,7 @@ nav a {
 }
 
 nav a.active {
-  background-color: #4da4cc; /* home at navigator */
+  background-color: #0c2376; /* home at navigator */
   color: #fff;               /* font color home */
 }
 
@@ -88,7 +88,7 @@ h1 {
   background-color: #0c2376;
   color: #fff;
   padding: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 

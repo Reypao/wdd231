@@ -1,0 +1,110 @@
+@media (max-width: 600px) {
+
+  /* Layout general */
+  section {
+    margin: 16px; /* aún menos margen */
+  }
+
+  /* Header apilado y centrado (desktop queda igual) */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 60px;
+    margin-right: 10px;
+  }
+
+  header h1 {
+    font-size: 2.1rem;
+  }
+
+  nav ul {
+    gap: 0.9rem;
+    font-size: 1.05rem;
+    justify-content: center;
+  }
+
+  /* Hero */
+  #hero {
+    padding: 1em 0.5em;
+  }
+
+  #hero img {
+    border-radius: 8px;
+  }
+
+  /* Customers: 1 por fila */
+  #customers h2 {
+    font-size: 1.8em;
+  }
+
+  .customer {
+    width: 100%;
+  }
+
+  /* Grids (products/services): col única si no entra más */
+  #catalogGrid,
+  #servicesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.9rem;
+  }
+
+  /* Cards: tipografías un poco más chicas */
+  .product-card .product-body h3,
+  .service-card .service-body h3 {
+    font-size: 1rem;
+  }
+
+  .product-card .product-body p,
+  .service-card .service-body p {
+    font-size: 0.92rem;
+  }
+
+  .service-card .service-more {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  /* Contact form */
+  .contact-form {
+    max-width: 100%;
+  }
+
+  /* Modal: margen superior un poco menor en teléfonos */
+  .modal-dialog {
+    margin: 6vh auto 0;
+    width: min(94vw, 520px);
+  }
+
+  /* Footer apilado y centrado */
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    height: 56px;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-copy {
+    justify-content: center;
+  }
+}

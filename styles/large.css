@@ -111,7 +111,7 @@
   }
 
   .course-list > div {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .social-links img {
@@ -120,6 +120,6 @@
   }
 
   footer {
-    font-size: 1rem;
+    font-size: 5rem;
   }
 }

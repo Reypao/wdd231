@@ -1,6 +1,3 @@
-// scripts/services.js
-// Lista de servicios + modal "Ver más" con label e id.
-
 import { fetchJSON } from './common.js';
 
 const statusEl = document.querySelector('#servicesStatus');
@@ -23,7 +20,7 @@ function crearCardServicio(servicio) {
     <div class="service-body">
       <h3>${label}</h3>
       <p><strong>ID:</strong> ${id}</p>
-      <button class="service-more" data-id="${id}" data-label="${label}">Look More</button>
+      <button class="service-more" data-id="${id}" data-label="${label}">See more</button>
     </div>
   `;
   return card;
@@ -38,42 +35,39 @@ async function cargarServicios() {
     gridEl.innerHTML = '';
     servicios.forEach(s => gridEl.appendChild(crearCardServicio(s)));
 
-    statusEl.textContent = servicios.length + ' services.';
+    statusEl.textContent = 'Se cargaron ' + servicios.length + ' servicios.';
   } catch (error) {
     console.error('Error al cargar servicios:', error);
     statusEl.textContent = 'Ocurrió un error al cargar los servicios.';
   }
 }
 
-// --- Modal: abrir/cerrar ---
-function abrirModal({ id, label }) {
+function openModal({ id, label }) {
   if (!modalEl) return;
   modalTitleEl.textContent = label;
   modalContentEl.textContent = 'ID: ' + id;
   modalEl.classList.remove('hidden');
-  // Enfocamos el botón de cerrar para accesibilidad simple
+  
   if (modalCloseEl) modalCloseEl.focus();
 }
 
-function cerrarModal() {
+function closeModal() {
   if (!modalEl) return;
   modalEl.classList.add('hidden');
 }
 
-// Delegación de eventos en el grid para el botón "Ver más"
 gridEl.addEventListener('click', (e) => {
   const btn = e.target.closest('.service-more');
   if (!btn) return;
   const id = btn.getAttribute('data-id') || '';
   const label = btn.getAttribute('data-label') || 'Servicio';
-  abrirModal({ id, label });
+  openModal({ id, label });
 });
 
-// Cierre de modal: botón X, backdrop y tecla Escape
-modalCloseEl?.addEventListener('click', cerrarModal);
-modalBackdropEl?.addEventListener('click', cerrarModal);
+modalCloseEl?.addEventListener('click', closeModal);
+modalBackdropEl?.addEventListener('click', closeModal);
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') cerrarModal();
+  if (e.key === 'Escape') closeModal();
 });
 
 document.addEventListener('DOMContentLoaded', cargarServicios);
